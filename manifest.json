@@ -1,0 +1,37 @@
+{
+  "name": "Vdi Clipboard Transfer",
+  "version": "1.0",
+  "description": "用来交换vdi环境中的内容，按alt+c拷贝剪贴板内容到飞书，alt+v从飞书粘贴内容到剪贴板",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab", "tabs", 
+    "clipboardRead", "clipboardWrite", 
+    "notifications", 
+    "storage", 
+    "*://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "options_page": "options.html",
+  "browser_action": {
+    "default_title": "Vdi Clipboard Transfer"
+  },
+  "commands": {
+    "paste-from-clipboard": {
+      "suggested_key": {
+        "default": "Alt+C",
+        "mac": "Alt+C"
+      },
+      "description": "paste clipboard content to feishu doc"
+    },
+    "copy-to-clipboard": {
+      "suggested_key": {
+        "default": "Alt+V",
+        "mac": "Alt+V"
+      },
+      "description": "copy feishu doc content to clipboard"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>options</title>
+</head>
+<body>
+  <h3 style="margin-bottom: 0px;">说明：</h3>
+  <div style="font-size: 12px; line-height:1.5em; color: #666;">
+    读：从设置的飞书地址读取内容, 适用于外网谷歌浏览器, 快捷键为alt+v<br>
+    写：拷贝vdi字符内容到飞书地址, 适用于vdi谷歌浏览器, 快捷键为alt+c<br>
+    读写：当前谷歌浏览器开启读写, 快捷键为alt+v/c
+  </div>
+  <br>
+  <br>
+  <form>
+    <fieldset>
+      <legend>设置可编辑飞书文档url地址 与 读写方式</legend>
+      <label>文档url <input type="text" name="url" id="url" value=""></label><br>
+      <label><input type="radio" name="method" id="read" value="read">从文档读（外网谷歌浏览器）</label><br>
+      <label><input type="radio" name="method" id="write" value="write">写到文档（适用于vdi环境）</label><br>
+      <label><input type="radio" name="method" id="readwrite" value="readwrite">读写文档（当前谷歌浏览器开启读写）</label>
+    </fieldset>
+  </form>
+  <br>
+  <button id="save" style="margin-top: 10px">Save</button>
+  <span id="status" style="margin-top: 5px"></span>
+  
+  <script src="options.js"></script>
+</body>
+</html>
